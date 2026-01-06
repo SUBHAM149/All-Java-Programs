@@ -1,0 +1,15 @@
+//Finding color
+void main()
+{
+	String str=IO.readln("Enter the color name:");
+	char color=str.toLowerCase().charAt(0);
+	switch(color)
+	{
+		case'r','a'->IO.println("red color");
+		case'b'->IO.println("blue color");
+		case'g'->IO.println("green color");
+		case'v'->IO.println("voulate color");
+		case'o'->IO.println("orange color");
+	}
+	IO.println("This line will be executed every time");
+}
