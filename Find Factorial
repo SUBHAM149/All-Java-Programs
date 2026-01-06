@@ -1,0 +1,27 @@
+//Find Factorial
+package com.sub.blc;
+
+public class FindFactorial {
+
+	public static int getFindFactorial(int num) {
+		int fact=1;
+		for(int i=1;i<=num;i++)
+		{
+			fact=fact*i;
+		}
+		return fact;
+	}
+
+}
+package com.sub.elc;
+
+import com.sub.blc.FindFactorial;
+
+public class FindFact {
+	public static void main(String[] args) {
+		int number=Integer.parseInt(IO.readln("Ener A number : "));
+		IO.println("The factorial of "+number+" is :"+FindFactorial.getFindFactorial(number));
+
+	}
+
+}
