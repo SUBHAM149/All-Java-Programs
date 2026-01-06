@@ -1,0 +1,40 @@
+//Finding Employee Data
+package com.sub.blc;
+
+import java.util.Scanner;
+
+public class Employee {
+   int employeeNumber;
+   String employeeName;
+   double employeeSalary;
+   
+   public void setEmployeeData() {
+	   Scanner sc=new Scanner(System.in);
+	   System.out.print("Enter employee Number :");
+	   employeeNumber=Integer.parseInt(sc.nextLine());
+	   System.out.print("Enter employee name :");
+	   employeeName=sc.nextLine();
+	   System.out.print("Emter employee salary:");
+	   employeeSalary=Double.parseDouble(sc.nextLine());
+   }
+   
+   public void getEmployeeData() {
+	   System.out.println("employee Number"+employeeNumber);
+	   System.out.println("employee name"+employeeName);
+	   System.out.println("employee Salary"+employeeSalary);
+   } 
+}
+package com.sub.elc;
+
+import com.sub.blc.Employee;
+
+public class EmployeeDemo {
+
+	public static void main(String[] args) {
+		Employee kuta=new Employee();
+		kuta.setEmployeeData();
+		kuta.getEmployeeData();
+
+	}
+
+}
