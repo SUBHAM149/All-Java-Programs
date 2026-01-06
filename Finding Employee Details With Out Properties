@@ -1,0 +1,62 @@
+//Finding Employee Details With Out Properties
+package com.sub.blc;
+
+public class EmployeeWithProperties {
+    String firstName;
+    String SecondName;
+    int employeeId;
+    double salary;
+    int noOfProject;
+    
+    
+    public void employeeData(String FName,String SName,int Eid,Double salar,int project) 
+    {
+    	firstName=FName;
+    	SecondName=SName;
+    	employeeId=Eid;
+    	salary=salar;
+    	noOfProject=project;	 
+	 }
+    public void calculateSalary() 
+    {
+    	if(noOfProject > 5 && noOfProject < 10) 
+    		salary += 5000;
+    	else if(noOfProject > 10 && noOfProject < 20) 
+    			salary += 10000;
+    	else if(noOfProject > 20 && noOfProject < 30) 
+    			salary += 10000;
+    		
+    }
+    public void displayDetails() {
+    	System.out.println("Employee [First Name :"+firstName+",Second Name :"+SecondName+",Employee Id :"+employeeId+",Employee Salary :"+salary+",No Of Project"+noOfProject+"]");
+    }
+    
+}
+package com.sub.elc;
+	import com.sub.blc.EmployeeWithProperties;
+	import java.util.Scanner;
+
+import com.sub.blc.EmployeeWithProperties;
+
+	public class EmployeeProjectSalary {
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        EmployeeWithProperties e = new EmployeeWithProperties();
+
+	        System.out.print("Enter First Name: ");
+	        String FName = sc.nextLine();
+	        System.out.print("Enter Last Name: ");
+	        String  SName= sc.nextLine();
+	        System.out.print("Enter Employee ID: ");
+	        int Eid = sc.nextInt();
+	        System.out.print("Enter Salary: ");
+	        double salar = sc.nextDouble();
+	        System.out.print("Enter No. of Projects: ");
+	        int project= sc.nextInt();
+
+	        e.employeeData(FName, SName, Eid, salar, project);
+	        e.calculateSalary();
+	        e.displayDetails();
+	        sc.close();
+	    }
+	}
