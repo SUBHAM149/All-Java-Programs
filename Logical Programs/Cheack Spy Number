@@ -1,0 +1,32 @@
+//Cheack Spy Number
+package com.sub.blc;
+
+public class CheackSpay {
+
+	public static boolean isSpay(int num) {
+		int sum=0;
+		int prod=1;
+		while(num!=0)
+		{
+			int digit=num%10;
+			sum=sum+digit;
+			prod=prod*digit;
+			num=num/10;
+		}
+		return sum==prod;
+	}
+
+}
+package com.sub.elc;
+
+import com.sub.blc.CheackSpay;
+
+public class CheackSpy {
+
+	public static void main(String[] args) {
+		int number=Integer.parseInt(IO.readln("Enter A Number: "));
+		IO.println("Is"+number+"a spy nuber :"+CheackSpay.isSpay(number));
+
+	}
+
+}
