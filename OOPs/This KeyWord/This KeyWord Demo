@@ -1,0 +1,32 @@
+package com.sub.variable_shadow;
+
+public class Customer {
+
+	private int id;
+	private String name;
+	
+	public void setCustomerData(int id, String name)
+	{
+		this.id=id;
+		this.name=name;
+	}
+	public void getCustomerData() 
+	{
+		IO.println("Customer Id Id : "+this.id);
+		IO.println("Customer Name Id : "+this.name);
+	}
+
+}
+package com.sub.variable_shadow;
+
+public class ThisKeywordDemo {
+
+	public static void main(String[] args) {
+		Customer scott=new Customer();
+		scott.setCustomerData(100, "scott");
+		scott.getCustomerData();
+		
+
+	}
+
+}
