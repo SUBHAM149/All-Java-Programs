@@ -1,0 +1,38 @@
+package com.sub.printing_object_properties;
+
+public class Manager {
+
+	private int id;
+	private String name;
+	private double salary;
+	
+	public void setManagerData(int id,String name,double salary)
+	{
+		this.id=id;
+		this.name=name;
+		this.salary=salary;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Manager [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+	
+}
+package com.sub.printing_object_properties;
+
+public class ManagerElc {
+
+	public static void main(String[] args) {
+		Manager smith = new Manager();
+		smith.setManagerData(101, "Smith", 50000);
+		IO.println(smith);
+		
+		Manager rashmi = new Manager();
+		rashmi.setManagerData(102, "rashmi", 9000);
+		IO.println(rashmi);
+
+	}
+
+}
