@@ -1,0 +1,30 @@
+package com.sub.pass_by_value;
+
+public class Customer {
+     private double bill=12000;
+     
+public double getBill() {
+		return bill;
+	}
+	 public void setBill(double bill) {
+		 this.bill = bill;
+	 }
+package com.sub.pass_by_value;
+
+public class PassByValueDemo4 {
+
+	public static void main(String[] args) {
+		Customer customer=new Customer();
+		IO.println("Before Methos Calling: "+customer.getBill());
+		modify(customer);
+		IO.println("After Methos Call, The Bill Is: "+customer.getBill());
+	}
+	public static void modify(Customer cust) {
+		//cust=new Customer();(this is for deep copy)
+		cust.setBill(18000);
+	}
+
+}
+
+
+}
