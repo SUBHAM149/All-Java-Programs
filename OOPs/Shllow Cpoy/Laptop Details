@@ -1,0 +1,54 @@
+//BLC
+package ShallowCopy;
+
+public class laptop {
+   private String brand;
+   private double price;
+   public laptop(String brand, double price) {
+	super();
+	this.brand = brand;
+	this.price = price;
+   } 
+  public String getBrand() {
+	return brand;
+}
+
+
+   public void setBrand(String brand) {
+	this.brand = brand;
+   }
+
+
+   public double getPrice() {
+	return price;
+   }
+
+
+   public void setPrice(double price) {
+	this.price = price;
+   }
+
+
+   @Override
+   public String toString() {
+	return "laptop [brand=" + brand + ", price=" + price + "]";
+   }   
+}
+
+//ELC
+package ShallowCopy;
+
+public class laptopDemo {
+
+	public static void main(String[] args) {
+		laptop lap1=new laptop("hp",90000);
+		System.out.println(lap1);
+		laptop lap2=lap1;
+		lap2.setBrand("Dell");
+		lap2.setPrice(950000);
+		System.out.println("After modification through Setter!!!");
+        System.out.println(lap1);
+        System.out.println(lap2);
+	}
+
+}
