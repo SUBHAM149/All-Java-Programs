@@ -1,0 +1,49 @@
+//BLC
+package heap_stack;
+
+public class Customer {
+
+	private String name;
+	private int id;
+	
+	public Customer(String name,int id)
+	{
+		this.name=name;
+		this.id=id;
+	}
+
+	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return this.id;
+	}	
+
+}
+//ELC
+package heap_stack;
+
+public class CustomerDemo {
+
+	void main() 
+	{
+		int val=100;
+		Customer c=new Customer("Ravi",2);
+		m1(c);
+		IO.println(c.getId());
+	}
+	public void m1(Customer cust)
+	{
+		cust.setId(5);
+		cust=new Customer("Rahul",7);
+		
+		cust.setId(9);
+		IO.println(cust.getId());
+	}
+
+}
+//OUTPUT
+//9
+//5
