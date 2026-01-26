@@ -1,0 +1,46 @@
+package Encapsulation;
+//BLC
+public class Rectangle {
+	 
+	    private double width;
+	    private double height;
+
+	    public Rectangle(double width, double height) {
+	        if (width < 0 || height < 0) {
+	            throw new IllegalArgumentException("Error: Width and height must be non-negative.");
+	        }
+	        this.width = width;
+	        this.height = height;
+	    }
+	    
+	    public double getArea() {
+	        return width * height;
+	    }  
+	    public double getPerimeter() {
+	        return 2 * (width + height);
+	    }
+	}
+//ELC
+package Encapsulation;
+public class RectangleDemo {
+	
+	
+	    public static void main(String[] args) {
+	        try {
+	            
+	            Rectangle rect1 = new Rectangle(5, 10);
+	            System.out.println("Area: " + rect1.getArea());
+	            System.out.println("Perimeter: " + rect1.getPerimeter());
+
+	            
+	            
+	            Rectangle rect2 = new Rectangle(-5, 10);
+	            System.out.println("Area: " + rect2.getArea());
+	            System.out.println("Perimeter: " + rect2.getPerimeter());
+	        } catch (IllegalArgumentException e) {
+	            System.out.println(e.getMessage());
+	        }
+	    }
+	}
+
+
