@@ -1,0 +1,56 @@
+package com.sub.copy_constructor;
+
+public class CopyConstructorDemo1 {
+
+	public static void main(String[] args) {
+		Employee e1=new Employee(111,"Scott");
+		IO.println("Employee Object: "+e1);
+		
+		Manager m1=new Manager(e1);
+		IO.println("Manager Object: "+m1);
+
+	}
+
+}
+class Employee{
+	private int employeeId;
+	private String employeeName;
+	
+	public Employee(int employeeId, String employeeName) {
+		super();
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + "]";
+	}
+
+	public int getEmployeeId() {
+		return this.employeeId;
+	}
+
+	public String getEmployeeName() {
+		return this.employeeName;
+	}
+	
+}
+
+class Manager{
+	private int managerId;
+	private String managerName;
+	
+	
+	public Manager(Employee emp) {
+		this.managerId = emp.getEmployeeId();
+		this.managerName = emp.getEmployeeName();
+	}
+
+
+	@Override
+	public String toString() {
+		return "Manager [managerId=" + managerId + ", managerName=" + managerName + "]";
+	}
+
+}
