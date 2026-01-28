@@ -56,4 +56,23 @@ public class Student {
 		sc.close();
  }
 }
-//The purpose of the factory method is to provide controlled and centralized object creation.
+/* The purpose of the factory method is to provide controlled and centralized object creation.
+OUTPUT
+Enter Student Name: 
+SUBHAM
+Enter Student Age: 
+25
+Enter Student Grade: 
+A
+Student [name=SUBHAM, age=25, grade=A]
+Do you want to continue? (yes/no): YES
+Enter Student Name: 
+SASMITA
+Enter Student Age: 
+24
+Enter Student Grade: 
+A
+Student [name=SASMITA, age=24, grade=A]
+Do you want to continue? (yes/no): NO
+Exiting... Thank you!
+*/
