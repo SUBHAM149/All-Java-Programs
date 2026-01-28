@@ -1,0 +1,26 @@
+package constructor_overloding;
+
+class Demo
+{
+	public Demo()
+	{
+	super();
+	IO.println("No Argument Constructor");
+    }
+    {
+	IO.println("Non static block");
+    }
+}
+public class ConstructorOverlodingDemo2 
+{
+   void main()
+   {
+	new Demo();
+	new Demo();
+    }
+} 
+/*OUTPUT
+Non static block
+No Argument Constructor
+Non static block
+No Argument Constructor */
