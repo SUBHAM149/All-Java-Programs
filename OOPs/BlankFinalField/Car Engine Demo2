@@ -1,0 +1,46 @@
+package com.sub.blank_final_field;
+
+public class BlankFinalFieldDemo2 {
+    public static void main(String[] args) {
+    	
+        Engine engine = new Engine("Petrol", 90);
+        Car car = new Car("Wagnor", 2021, engine);
+        
+        System.out.println(car); 
+    }
+}
+
+class Engine {
+    private String engineType;
+    private int horsePower;
+
+    public Engine(String engineType, int horsePower) {
+        this.engineType = engineType;
+        this.horsePower = horsePower;
+    }
+
+    @Override
+    public String toString() {
+        return "Engine [engineType=" + engineType + ", horsePower=" + horsePower + "]";
+    }
+}
+
+class Car {
+    private String carNmae;
+    private int carModal;
+    private final Engine engine; 
+
+    public Car(String carNmae, int carModal, Engine engine) {
+        this.carNmae = carNmae;
+        this.carModal = carModal;
+        this.engine = engine;
+    }
+
+    @Override
+    public String toString() {
+        return "Car [carNmae=" + carNmae + ", carModal=" + carModal + ", engine=" + engine + "]";
+    }
+}
+*/
+OUTPUT
+Car [carNmae=Wagnor, carModal=2021, engine=Engine [engineType=Petrol, horsePower=90]]  */
