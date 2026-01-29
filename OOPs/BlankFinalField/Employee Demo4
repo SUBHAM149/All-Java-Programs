@@ -1,0 +1,38 @@
+package com.sub.blank_final_field;
+class Employee
+{
+	int id;
+	final double salary;
+	public Employee()
+	{
+		id=111;
+		salary=12890;
+	}
+	public Employee(int id,double salary)
+	{
+		this.id=id;
+		this.salary=salary;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", salary=" + salary + "]";
+	}
+	
+}
+public class BlankFinalFieldDemo4 {
+
+	public static void main(String[] args) {
+		Employee e1=new Employee();
+		IO.println(e1);
+		
+		Employee e2=new Employee(222, 23456);
+		IO.println(e2);
+		
+
+	}
+
+}
+//OUTPUT
+//Employee [id=111, salary=12890.0]
+//Employee [id=222, salary=23456.0]
