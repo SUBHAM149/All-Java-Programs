@@ -1,0 +1,112 @@
+package com.sub.super_keyword;
+class Employee
+{
+	protected double salary=65000;
+	public Employee()
+	{
+		printSalary();
+	}
+	public void printSalary()
+	{
+		 IO.println(salary);
+	}
+}
+class Developer extends Employee
+{
+	protected double salary=90000;
+	public void printSalary()
+	{
+		IO.println(salary);
+		IO.println(super.salary);
+	}
+}
+public class VariableHidingDemo {
+	public static void main(String[] args) {
+		Developer developer=new Developer();
+		
+                
+	}
+
+}
+//🔑 Key Points of This Program
+//1️⃣ Variable Hiding
+//
+//salary is present in both Employee and Developer
+//
+//Child variable hides parent variable (not overrides)
+//
+//protected double salary = 65000;   // Employee
+//protected double salary = 90000;   // Developer
+//
+//
+//Access rule:
+//
+//salary → current class variable
+//
+//super.salary → parent class variable
+//
+//2️⃣ Method Overriding
+//
+//printSalary() is overridden in Developer
+//
+//public void printSalary()   // in both classes
+//
+//
+//✔ Same name
+//✔ Same parameters
+//✔ Runtime polymorphism
+//
+//3️⃣ Constructor Call Order
+//
+//When you write:
+//
+//Developer developer = new Developer();
+//
+//
+//Java internally does:
+//
+//Calls Employee constructor
+//
+//Then calls Developer constructor (default)
+//
+//4️⃣ ⚠️ Overridden Method Called Inside Constructor
+//
+//This is the MOST IMPORTANT POINT
+//
+//public Employee() {
+//    printSalary();   // runtime method binding
+//}
+//
+//
+//Even though constructor is of Employee
+//
+//Overridden method of Developer is executed
+//
+//Because method calls are resolved at runtime
+//
+//5️⃣ Why This Output Comes
+//
+//At the time Employee constructor runs:
+//
+//Employee.salary = 65000 (initialized)
+//
+//Developer.salary = 0.0 (not initialized yet)
+//
+//So when Developer.printSalary() runs:
+//
+//IO.println(salary);        // Developer salary → 0.0
+//IO.println(super.salary); // Employee salary → 65000.0
+//
+//🖨️ Output
+//0.0
+//65000.0
+//
+//⚠️ Important Warning (Interview Favorite)
+//
+//Never call overridable methods inside constructors
+//
+//Because:
+//
+//Child object is not fully initialized
+//
+//Leads to unexpected output
