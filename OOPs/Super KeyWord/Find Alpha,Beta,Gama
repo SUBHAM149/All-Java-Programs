@@ -1,0 +1,43 @@
+package com.sub.super_keyword;
+class Alpha
+{
+
+	@Override
+	public String toString() {
+		return "Alpha";
+	}
+	
+}
+class Beta extends Alpha
+{
+
+	@Override
+	public String toString() {
+		return "Beta";
+	}
+    
+}
+class Gama extends Alpha
+{
+
+	@Override
+	public String toString() {
+		return "Gama";
+	}
+    
+}
+public class MethodOverriding {
+public static void main(String[] args) 
+    {
+	   Alpha a=new Alpha();
+	   IO.println(a.toString());
+	   
+	   Beta b=new Beta();
+	   IO.println(b.toString());
+	   	   
+	   Gama g=new Gama();
+	   IO.println(g.toString());
+		
+	}
+
+}
