@@ -1,0 +1,30 @@
+package com.sub.super_keyword;
+class Alpha
+{
+	public 	Alpha()
+	{
+		IO.println("No Argument constructor of Alpha class");
+	}
+}
+class Beta extends Alpha
+{
+
+	public Beta()
+	{
+		IO.println("No Argument constructor of Beta Class");
+	}
+}
+class Gama extends Alpha
+{
+
+	public Gama()
+	{
+		IO.println("No Argument constructor of Gama Class");
+	}
+}
+public class CallingNoArgument {
+public static void main(String[] args) {
+		new Gama();
+	}
+
+}
