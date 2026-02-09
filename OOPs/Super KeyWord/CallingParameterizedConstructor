@@ -1,0 +1,32 @@
+package com.sub.super_keyword;
+class Vechicle
+{
+	protected String name;
+	public Vechicle(String name) {
+		super();
+		this.name=name;
+	}
+}
+class Car extends Vechicle
+{
+	public Car(String name)
+	{
+		super(name);
+	}
+
+	@Override
+	public String toString() {
+		return "Car [name= "+ name +"]";
+	}
+	
+}
+public class CallingParameterizedConstructor {
+
+	public static void main(String[] args) {
+		String carName=IO.readln("Enter the name of the Car : ");
+		Car car=new Car(carName);
+		IO.println(car);
+
+	}
+
+}
