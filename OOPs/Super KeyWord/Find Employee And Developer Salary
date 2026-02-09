@@ -1,0 +1,31 @@
+package com.sub.super_keyword;
+class Employee
+{
+	protected double salary=65000;
+}
+class Developer extends Employee
+{
+	protected double salary=90000;
+	public void printSalary()
+	{
+		IO.println("Developer Salary is: "+this.salary);
+		IO.println("Employee Salary is: "+super.salary);
+	}
+}
+public class VariableHidingDemo {
+	public static void main(String[] args) {
+		Developer developer=new Developer();
+		
+        developer.printSalary();
+        
+	}
+
+}
+////🔑 Key Concept (exam / interview point)
+//
+//Variable Hiding:
+//When child class has a variable with the same name as parent class.
+//
+//this.salary → current class (Developer)
+//
+//super.salary → parent class (Employee)
