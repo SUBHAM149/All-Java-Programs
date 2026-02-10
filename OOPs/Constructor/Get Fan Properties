@@ -1,0 +1,43 @@
+package OPPs;
+
+	public class Fan {
+		String name;
+		String coil;
+		int wings;
+		
+		public void switchOn() {
+		     System.out.println(name + " fan is ON!!");
+		 }
+
+		 public void switchOff() {
+		     System.out.println(name + " fan is OFF!!");
+		 }
+
+		 public static void main(String[] args) {
+		     Fan fan1 = new Fan();
+		     fan1.name = "Crompton";
+		     fan1.coil = "Copper";
+		     fan1.wings = 3;
+
+		     fan1.switchOn();
+		     fan1.switchOff();
+		 }
+	}
+
+
+package OPPs;
+
+public class FanDetails {
+	
+	String name;
+	String coil;
+	int wings;
+	public void switchOn() {
+		System.out.println("Fan name is "+name);
+		System.out.println("Fan coil is "+coil);
+		System.out.println("Fan wings is "+wings);
+	}
+	public void switchOff() {
+		System.out.println("upon switching off the switch i will stop rotating");
+	}
+	}
