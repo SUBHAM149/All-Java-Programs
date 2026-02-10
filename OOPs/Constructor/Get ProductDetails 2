@@ -1,0 +1,72 @@
+package com.sub.blc;
+
+public class ProductDetails 
+{
+    private int id;
+    private String name;
+    private double price;
+    
+    public void setProductDetails(int id, String name, double price) 
+    {
+    	this.id=id;
+    	this.name=name;
+    	this.price=price;
+    }
+    public void calculateDiscount() 
+    {
+    	double discount=0.0;
+    	if(price<1000) 
+    	{
+    		discount=price*0.05;
+    	}
+    	else if(price>=1000 && price<=5000) 
+    	{
+    		discount=price*0.1;
+    	}
+    	else 
+    	{
+    		discount=price*0.15;
+    	}
+    	 double finalprice=price-discount;
+    	 System.out.println("Discount amount"+discount);
+    	 System.out.println("Price After Discount"+finalprice);
+    }
+	@Override
+	public String toString() {
+		return "ProductDetails [id=" + id + ", name=" + name + ", price=" + price + "]";
+	}
+       
+}
+
+package com.sub.elc;
+
+ import com.sub.blc.ProductDetails; 
+import java.util.Scanner;
+
+
+public class getProductDetails {
+
+	public static void main(String[] args) {
+		        Scanner sc = new Scanner(System.in);
+
+		        ProductDetails product = new ProductDetails();
+
+		        System.out.print("Enter Product ID: ");
+		        int id = sc.nextInt();
+
+		        sc.nextLine(); 
+		        System.out.print("Enter Product Name: ");
+		        String name = sc.nextLine();
+
+		        System.out.print("Enter Product Price: ");
+		        double price = sc.nextDouble();
+
+		        product.setProductDetails(id, name, price);
+
+		        System.out.println("----- Product Details -----");
+		        System.out.println(product);
+
+		        product.calculateDiscount();
+		        sc.close();
+		    }
+		}
