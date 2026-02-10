@@ -1,0 +1,62 @@
+package com.sub.super_keyword;
+//Hierarchical Inhertance Program
+class Shape 
+{
+	protected int x;
+	public Shape(int x)
+	{
+		this.x=x;
+		IO.println("x value is : "+x);
+	}
+}
+class Square extends Shape
+{
+	public Square(int side)
+	{
+		super(side);
+	}
+	public double getAreaOfSquare()
+	{
+		double area=super.x*this.x;
+		return area;
+	}
+}
+class Rectangle extends Shape
+{
+	protected int breadth;
+	public Rectangle(int length,int breadth)
+	{
+		super(length);
+		this.breadth=breadth;
+	}
+	public double getAreaOfRectangle()
+	{
+		double area=this.x*this.breadth;
+		return area;
+	}
+}
+public class SuperDemo {
+	public static void main(String[] args) {
+     
+		int side=Integer.parseInt(IO.readln("Enter Value Of Side: "));
+		Square square=new Square(side);
+		IO.println("Area of the Square is :"+square.getAreaOfSquare());
+		
+		
+		int length=Integer.parseInt(IO.readln("Enter Value Of Length : "));
+		int breadth=Integer.parseInt(IO.readln("Enter Value Of Breadth : "));
+		
+		Rectangle rectangle=new Rectangle(length,breadth);
+		IO.println("Area of rectangle is : "+rectangle.getAreaOfRectangle());
+
+	}
+
+}
+//OUTPUT
+Enter Value Of Side: 2
+x value is : 2
+Area of the Square is :4.0
+Enter Value Of Length : 5
+Enter Value Of Breadth : 5
+x value is : 5
+Area of rectangle is : 25.0
