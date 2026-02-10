@@ -1,0 +1,44 @@
+package com.sub.blc;
+	public class Product {
+	    int productId;
+	    String productName;
+	    double productPrice;
+
+	    public void setProductData(int id, String name, double price) {
+	        productId = id;
+	        productName = name;
+	        productPrice = price;
+	    }
+
+	    public void getProductInfo() {
+	        System.out.println("Product ID    : " + productId);
+	        System.out.println("Product Name  : " + productName);
+	        System.out.println("Product Price : " + productPrice);
+	    }
+	}
+
+package com.sub.elc;
+import java.util.Scanner;
+
+import com.sub.blc.Product;
+
+public class GetProduct {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        Product p = new Product();
+
+        System.out.print("Enter Product ID: ");
+        int id = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Enter Product Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Product Price: ");
+        double price = sc.nextDouble();
+
+        p.setProductData(id, name, price);
+        p.getProductInfo();
+        sc.close();
+	}
+}
