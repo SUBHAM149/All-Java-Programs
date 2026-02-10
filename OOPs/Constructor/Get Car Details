@@ -1,0 +1,44 @@
+package OPPs;
+
+public class car {
+		String name;
+		int model;
+		String color;
+		
+		public void getCarInformation() {
+		     System.out.println("Car Name : " + name);
+		     System.out.println("Model No : " + model);
+		     System.out.println("Color    : " + color);
+		 }
+
+		 public void drive() {
+		     System.out.println(name + " is now driving smoothly on the road!");
+		 }
+
+		 public static void main(String[] args) {
+		     car car1 = new car();
+		     car1.name = "Defender";
+		     car1.model = 2024;
+		     car1.color = "Black";
+
+		     car1.getCarInformation();
+		     car1.drive();
+		 }
+	}
+
+package OPPs;
+
+public class CarDetails {
+	
+	String name;
+	int model;
+	String color;
+	public void getCarInfo() {
+		System.out.println("Car name is "+name);
+		System.out.println("Car model is "+model);
+		System.out.println("Car color is "+color);
+	}
+	public void drive() {
+		System.out.println("Max driving speed limit is 220k/ph");
+	}
+	}
