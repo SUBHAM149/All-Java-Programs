@@ -1,0 +1,44 @@
+package com.sub.single_level_inheritance;
+class EMP
+{
+	protected int id;
+	protected String name;
+	protected double salary;
+	
+	public EMP(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	
+}
+
+class PEMP extends EMP
+{
+	protected String department;
+	protected String designation;
+	
+	
+	public PEMP(int id, String name, double salary, String department, String designation) {
+		super(id, name, salary);
+		this.department = department;
+		this.designation = designation;
+	}
+
+
+	@Override
+	public String toString() {
+		return "PEMP [id=" + id + ", name=" + name + ", salary=" + salary + ", department=" + department
+				+ ", designation=" + designation + "]";
+	}
+		
+}
+public class SingleLecelDemo {
+
+	public static void main(String[] args) {
+		PEMP p=new PEMP(1,"Surya",90000,"Cricket","Batter");
+        IO.println(p);
+	}
+
+}
