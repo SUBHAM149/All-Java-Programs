@@ -1,0 +1,25 @@
+package com.sub.super_keyword;
+class A
+{
+	protected int x=100;
+}
+class B extends A
+{
+	protected int x=200;
+	
+	public static void acess()
+	{
+		B b1=new B();
+		IO.println(b1.x);
+		
+		A a1=new A();
+		IO.println(a1.x);
+	}
+}
+public class IQ {
+
+	public static void main(String[] args) {
+		B.acess();
+	}
+
+}
