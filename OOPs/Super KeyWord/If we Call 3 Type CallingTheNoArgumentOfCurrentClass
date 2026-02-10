@@ -1,0 +1,28 @@
+package com.sub.super_keyword;
+class Parent
+{
+	public Parent()
+	{
+		IO.println("No Argument constructor of Parent Class");
+	}
+	public Parent(String name)
+	{
+		this();
+		IO.println("Paremeterized Constructor: "+name);
+	}
+}
+class Child extends Parent
+{
+	public Child()
+	{
+		super("java");
+		IO.println("No Argument constructor of Child Class");
+	}
+}
+public class CallingTheNoArgumentOfCurrentClass {
+
+	public static void main(String[] args) {
+		new Child();
+	}
+
+}
