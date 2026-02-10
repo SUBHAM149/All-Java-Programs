@@ -1,0 +1,47 @@
+package OPPs;
+//BLC
+public class StudentDetails {
+         String name;
+         int roll;
+         double height;
+         
+         public void About()
+         {
+        	 IO.println("Hello!!...I am "+name+" i study in NIT.");
+        	 IO.println("My Roll No is: "+roll+" My Height is: "+height+" inch.");
+         }
+         public void writeexam()
+         {
+        	 IO.println("Every Satuerday "+name+" is writing the exam.");
+         }
+}
+
+package OPPs;
+//ELC
+public class StudentAbout {
+
+	public static void main(String[] args) {
+		StudentDetails Subham=new StudentDetails();
+		
+		Subham.name="Ram";
+		Subham.roll=86;
+		Subham.height=5.6;
+
+		Subham.About();
+		Subham.writeexam();
+		
+		IO.println("__________");
+		
+		StudentDetails Khushi=new StudentDetails();
+		
+		Khushi.name="Khushi";
+		Khushi.roll=87;
+		Khushi.height=5.4;
+		
+		Khushi.About();
+		Khushi.writeexam();
+		
+		
+	}
+
+}
