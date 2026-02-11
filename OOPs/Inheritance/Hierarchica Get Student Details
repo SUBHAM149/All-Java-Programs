@@ -1,0 +1,67 @@
+package com.sub.hierarchical_demo;
+
+class Student
+{
+	protected int id;
+	protected String name;
+	protected double examFee;
+	
+	public Student(int id, String name, double examFee) 
+	{
+		super();
+		this.id = id;
+		this.name = name;
+		this.examFee = examFee;
+	}	
+}
+
+
+
+class Hosteller extends Student
+{
+	protected double hostelFees;
+
+	public Hosteller(int id, String name, double examFee, double hostelFees) 
+	{
+		super(id, name, examFee);
+		this.hostelFees = hostelFees;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Hosteller [id=" + id + ", name=" + name + ", examFee=" + examFee + ", hostelFees=" + hostelFees + "]";
+	}   		
+}
+
+
+class DayScholer extends Student
+{
+	protected double transportFee;
+
+	public DayScholer(int id, String name, double examFee, double transportFee) 
+	{
+		super(id, name, examFee);
+		this.transportFee = transportFee;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "DayScholer [id=" + id + ", name=" + name + ", examFee=" + examFee + ", transportFee=" + transportFee
+				+ "]";
+	}	
+}
+
+
+public class HierarchicalInheritance {
+	public static void main(String[] args) {
+		Hosteller hosteller=new Hosteller(1,"Alean",2500,150000);
+		IO.println(hosteller);
+		
+		DayScholer dayscholler=new DayScholer(2,"Smith",2500,90000);
+		IO.println(dayscholler);
+
+	}
+
+}
