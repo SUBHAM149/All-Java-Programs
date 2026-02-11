@@ -1,0 +1,65 @@
+package com.sub.multi_level;
+class Employee 
+{
+	protected String name;
+	protected double salaary;
+	
+	public Employee(String name,double salary)
+	{
+		super();
+		this.name=name;
+		this.salaary=salary;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return "Employee [name=" + name + ", salaary=" + salaary + "]";
+	}
+	
+}
+
+class Manager extends Employee
+{
+	protected String department;
+
+	public Manager(String name, double salary, String department) 
+	{
+		super(name, salary);
+		this.department = department;
+	}
+
+	@Override
+	public String toString() 
+	{
+		return super.toString()+"Manager [department=" + department + "]";
+	}
+	
+}
+
+class TeamLead extends Manager
+{
+	protected int teamSize;
+	protected String projectTitle;
+	
+	public TeamLead(String name, double salary, String department, int teamSize, String projectTitle) 
+	{
+		super(name, salary, department);
+		this.teamSize = teamSize;
+		this.projectTitle = projectTitle;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"TeamLead [teamSize=" + teamSize + ", projectTitle=" + projectTitle + "]";
+	}
+	
+	
+}
+public class MultiLevelDemo {
+	public static void main(String[] args) {
+		TeamLead teamlead=new TeamLead("Alean",75000,"IT",9,"Online Cart");
+       IO.println(teamlead);
+	}
+
+}
