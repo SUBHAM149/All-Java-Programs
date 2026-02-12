@@ -1,0 +1,31 @@
+package com.sub.overriding;
+class Bird
+{
+	public void fly()
+	{
+		IO.println("Generic Bird is Flying");
+	}
+}
+class Parrot extends Bird
+{
+	public void fly()
+	{
+		IO.println("Parrot Bird Is Flying");
+	}
+}
+class Peacock extends Bird
+{
+	public void fly()
+	{
+		IO.println("Peckock Bird is Flying");
+	}
+}
+public class OverridingDemo2 {
+
+	public static void main(String[] args) {
+		Bird bird=null;
+		bird=new Parrot();bird.fly();
+		bird=new Peacock();bird.fly();
+	}
+
+}
