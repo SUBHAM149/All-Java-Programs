@@ -1,0 +1,21 @@
+package com.sub.overriding;
+
+class Super {
+    void m1() {
+        System.out.println("M1 method in super class");
+    }
+}
+
+class Sub extends Super {
+    @Override
+    void m1() {
+        System.out.println("M1 method in sub class");
+    }
+}
+
+public class OverridingDemo3 {
+    public static void main(String[] args) {
+        Super s = new Sub();
+        s.m1();
+    }
+}
