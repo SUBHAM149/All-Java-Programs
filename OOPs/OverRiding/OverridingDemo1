@@ -1,0 +1,38 @@
+package com.sub.overriding;
+class Animal
+{
+	public void roam()
+	{
+		IO.println("Generic Animal is roaning");
+	}
+}
+class Dog extends Animal
+{
+	public void roam()
+	{
+	  IO.println("Dog Animal is roaming");
+	}
+}
+class Puppy extends Dog
+{
+	
+}
+class Lion extends Dog
+{
+ public void roam()
+ {
+	 IO.println("Lion Animal is roaming");
+ }
+}
+public class OverridingDemo1 {
+
+	public static void main(String[] args) {
+		Animal a1=new Puppy();
+		a1.roam();
+		
+		Animal a2=new Lion();
+		a1.roam();
+
+	}
+
+}
