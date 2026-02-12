@@ -1,0 +1,28 @@
+package com.sub.overriding;
+class RBI
+{
+	protected String ifscCode="RBIHYD00001";
+	public String loan()
+	{
+		return "Bank should provide loan";
+	}
+}
+class SBI extends RBI
+{
+	protected String ifscCode="SBIHYD00009";
+
+	@Override
+	public String loan() {
+		return "SBI PROVIDES THE LOAN @9.2%";
+	}
+	
+}
+public class OverridingDemo5 {
+
+	public static void main(String[] args) {
+	RBI rbi=new SBI();
+	IO.println(rbi.ifscCode+" : "+rbi.loan());
+
+	}
+
+}
