@@ -1,0 +1,40 @@
+package com.sub.down_casting;
+class Animal
+{
+	public void slaeep()
+	{
+		IO.println("Generic Animal Is Sleeping");
+	}
+}
+class Dog extends Animal
+{
+	
+	public void sleep()
+	{
+		IO.println("Dog Animal is Sleeping");
+	}
+}
+class Lion extends Animal
+{
+	
+	public void sleep()
+	{
+		IO.println("Lion Animal is Sleeping");
+	}
+}
+public class LossCoupling {
+
+	public static void main(String[] args) {
+		Animal animal=new Dog();
+		checkAnimalBehaviour(animal);
+		IO.println("=======================");
+		animal=new Lion();
+		checkAnimalBehaviour(animal);
+
+	}
+	public static  void checkAnimalBehaviour(Animal animal)
+	{
+		animal.slaeep(); 
+	}
+
+}
