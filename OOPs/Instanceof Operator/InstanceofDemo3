@@ -1,0 +1,29 @@
+package com.sub.instanceof_operator;
+
+class Bird {
+    public void fly() {
+        System.out.println("Bird can fly");
+    }
+}
+
+class Fish {
+    public void swim() {
+        System.out.println("Fish can swim");
+    }
+}
+
+public class InstanceofDemo3 {
+
+    public static void main(String[] args) {
+
+        Object obj = new Bird();
+
+        if (obj instanceof Bird) {
+            System.out.println("obj is pointing to Bird object");
+        }
+
+        if (obj instanceof Fish) {
+            System.out.println("obj is pointing to Fish object");
+        }
+    }
+}
