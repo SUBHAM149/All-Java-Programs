@@ -1,0 +1,72 @@
+package com.sub.down_casting;
+class Payment
+{
+	public void makePayment()
+	{
+		IO.println("Make a Generic Payment");
+	}
+}
+
+class UPI extends Payment
+{
+	public void makePayment()
+	{
+		IO.println("Making A Payment UPI");
+	}
+	public void offer()
+	{
+		IO.println("Make a 50k payment and get 2000 RS CASH BACK");
+	}
+}
+
+class DebitCard extends Payment
+{
+	public void makePayment()
+	{
+		IO.println("Make a Payment through Debit Card");
+	}
+}
+
+class CreditCard extends Payment
+{
+	public void makePayment()
+	{
+		IO.println("Make a Payment through CreditCard");
+	}
+	public void offer()
+	{
+		IO.println("Make  A Payment of 2 Lakh and get 2 Days holidays in GOA");
+	}
+}
+public class DownCastingDemo3 {
+
+	public static void main(String[] args)throws InstantiationException,IllegalAccessException,ClassNotFoundException {
+		
+        Payment payment=null;
+        payment=new UPI();
+        paymentGateway(payment);
+        IO.println("-----------------");
+        payment=new CreditCard();
+        paymentGateway(payment);
+        IO.println("-----------------");
+        payment=new DebitCard();
+        paymentGateway(payment);
+	}
+    public static void paymentGateway(Payment payment)
+    {
+    	if(payment instanceof UPI upi)
+    	{
+    		upi.makePayment();
+    		upi.offer();
+    	}
+    	else if(payment instanceof CreditCard card)
+    	{
+    		card.makePayment();
+    		card.offer();
+    	}
+    	else if(payment instanceof CreditCard card)
+    	{
+    		card.makePayment();
+    	}
+    }
+}
