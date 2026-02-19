@@ -1,0 +1,86 @@
+package com.sub.abstrac_Demo2;
+
+abstract class Animal
+{
+	protected String name;
+	public Animal(String name)
+	{
+		this.name=name;
+	}
+	public abstract void regularHealthCheackup();
+}
+class Lion extends Animal
+{
+	public Lion(String name)
+	{
+		super(name);
+	}
+	@Override
+	public void regularHealthCheackup()
+	{
+		IO.println(name+" is going for regular health cheackUp");
+	}
+}
+class Elephant extends Animal
+{
+	public Elephant(String name)
+	{
+		super(name);
+	}
+	@Override
+	public void regularHealthCheackup()
+	{
+		IO.println(name+" is going for regular health cheackUp");
+	}
+}
+class Dog extends Animal
+{
+	public Dog(String name)
+	{
+		super(name);
+	}
+	@Override
+	public void regularHealthCheackup()
+	{
+		IO.println(name+" is going for regular health cheackUp");
+	}
+}
+public class Demo5 {
+
+	public static void main(String[] args) 
+	{
+		Lion lions[]= {new Lion("Babber Sher"),new Lion("Simba"),new Lion("Sher")};
+		regularHealthCheackupCamp(lions);
+		
+		IO.println("--------------------");
+		Elephant elephant[]= {new Elephant("Gajraj"),new Elephant("Bala")};
+		regularHealthCheackupCamp(elephant);
+		
+		IO.println("--------------------");
+	    Dog dog[]= {new Dog("Sherrow"),new Dog("Tommy")};
+		regularHealthCheackupCamp(dog);
+   }
+	
+	
+	
+	
+	
+	public static void regularHealthCheackupCamp(Animal...animals)
+	{
+		for(Animal animal:animals)
+		{
+			animal.regularHealthCheackup();
+		}
+	}
+}
+OUTPUT
+------
+Babber Sher is going for regular health cheackUp
+Simba is going for regular health cheackUp
+Sher is going for regular health cheackUp
+--------------------
+Gajraj is going for regular health cheackUp
+Bala is going for regular health cheackUp
+--------------------
+Sherrow is going for regular health cheackUp
+Tommy is going for regular health cheackUp
