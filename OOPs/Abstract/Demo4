@@ -1,0 +1,36 @@
+package com.sub.abstract_demo;
+abstract class Alpha
+{
+	public abstract void show();
+	public abstract void demo();
+}
+abstract class Beta extends Alpha
+{
+	@Override
+	public void show()
+	{
+		IO.println("Show Method is overriden is Beta class");
+	}
+}
+class Gamma extends Beta
+{
+	@Override
+	public void demo()
+	{
+		IO.println("Show Method is overriden is Gamma class");
+	}
+}
+public class Demo4 {
+
+	public static void main(String[] args) {
+		Gamma gamma =new Gamma();
+		gamma.show();
+		gamma.demo();
+
+	}
+
+}
+OUTPUT
+-------
+Show Method is overriden is Beta class
+Show Method is overriden is Gamma class
