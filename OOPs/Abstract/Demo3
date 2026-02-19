@@ -1,0 +1,43 @@
+package com.sub.abstract_demo;
+abstract class  Animal
+{
+	protected String name;
+	public Animal(String name)
+	{
+		super();
+		this.name=name;
+	}
+	public abstract void roam();
+}
+class Lion extends Animal
+{
+	public Lion(String lionName)
+	{
+		if(lionName==null || lionName.equals("null")||lionName.isBlank())
+		{
+			System.err.println("Lion name cannot be null OR empty");
+			System.exit(0);
+		}
+		super(lionName);
+	}
+	@Override
+	public void roam()
+	{
+		IO.println(name+" Animal is roaming");
+	}
+}
+public class Demo3 {
+	public static void main(String[] args) {
+		String lionName=IO.readln("Enter Lion Name: ");
+		Animal animal=new Lion(lionName);
+		animal.roam();
+
+	}
+
+}
+OUTPUT
+------
+Enter Lion Name: Sherru
+Sherru Animal is roaming
+Enter Lion Name: Null
+Null Animal is roaming
