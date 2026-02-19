@@ -1,0 +1,38 @@
+package com.sub.abstract_demo;
+abstract class Bike
+{
+	protected int speed=90;
+	public Bike()
+	{
+		IO.println("Bike class constructor");
+	}
+	public void getBikeDetails()
+	{
+		IO.println("it has two wheels & one petrol engine");
+	}
+	public abstract void run();
+}
+class Honda extends Bike
+{
+	@Override
+	public void run()
+	{
+		IO.println("Honda bike is running");
+	}
+}
+public class Demo2 {
+	public static void main(String[] args) {
+		Bike obj=new Honda();
+		IO.println(obj.speed);
+		obj.getBikeDetails();
+		obj.run();
+
+	}
+
+}
+OUTPUT
+-------
+Bike class constructor
+90
+it has two wheels & one petrol engine
+Honda bike is running
