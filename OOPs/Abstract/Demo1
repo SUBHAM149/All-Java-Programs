@@ -1,0 +1,45 @@
+package com.sub.abstract_demo;
+sealed abstract class Shape permits Square,Rectangle,Circle
+{
+	public abstract void draw();
+}
+non-sealed class Square extends Shape
+{
+	@Override
+	public void draw()
+	{
+		IO.println("Drawing Square");
+	}
+}
+final class Rectangle extends Shape
+{
+	@Override
+	public void draw()
+	{
+		IO.println("Drawing Rectangle");
+	}
+}
+final class Circle extends Shape
+{
+	@Override
+	public void draw()
+	{
+		IO.println("Drawing Circle");
+	}
+}
+public class Demo1 {
+
+	public static void main(String[] args) {
+		Shape shape=null;
+		shape=new Square();shape.draw();
+		shape=new Rectangle();shape.draw();
+		shape=new Circle();shape.draw();
+
+	}
+
+}
+OUTPUT
+------
+Drawing Square
+Drawing Rectangle
+Drawing Circle
