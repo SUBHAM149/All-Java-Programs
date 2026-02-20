@@ -1,0 +1,32 @@
+package com.sub.interface_ex;
+interface Lift
+{
+	void keyOne();
+	void keyTwo();
+}
+public class InterfaceDemo1 {
+
+	public static void main(String[] args) {
+		Lift nitLift=new Lift()
+		{
+			@Override
+			public void keyOne()
+			{
+				IO.println("Key One is Pressed");
+			}
+			@Override
+			public void keyTwo()
+			{
+				IO.println("Key Two is Pressed");
+			}
+		};
+		nitLift.keyOne(); 
+		nitLift.keyTwo();
+
+	}
+
+}
+OUTPUT
+---------
+Key One is Pressed
+Key Two is Pressed
