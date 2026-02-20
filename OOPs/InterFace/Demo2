@@ -1,0 +1,28 @@
+package com.sub.interface_ex;
+
+sealed interface Moveable permits Car
+{
+	int SPEED=120;
+	void move();
+}
+final class Car implements Moveable
+{
+	@Override
+	public void move()
+	{
+		IO.println("Car is moving with "+SPEED+" KM/HR Speed");
+	}
+}
+public class InterFaceDemo2 {
+	public static void main(String[] args) {
+		Moveable moveable=new Car();
+		moveable.move();
+		IO.println("Speed of the Moveable is: "+Moveable.SPEED+" KM/HR Speed");
+
+	}
+
+}
+OUTPUT
+------
+ Car is moving with 120 KM/HR Speed
+Speed of the Moveable is: 120 KM/HR Speed 
