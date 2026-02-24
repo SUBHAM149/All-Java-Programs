@@ -1,0 +1,89 @@
+package com.sub.lamda_expression;
+interface Vechile
+{
+	void run();
+}
+public class LambdaDemo1 {
+
+	public static void main(String[] args) {
+		Vechile car=()->IO.println("Car is running");
+		car.run();
+		Vechile bus=()->IO.println("Bus is running");
+		bus.run();
+		Vechile bike=()->IO.println("Bike is running");
+		bike.run();
+
+	}
+
+}
+package com.sub.lamda_expression;
+@FunctionalInterface
+interface Calculator
+{
+	void doSum(int x,int y);
+}
+public class LambdaDemo2 {
+
+	public static void main(String[] args) {
+		Calculator calc=(c,d)->IO.println("Sum is: "+(c+d));
+		calc.doSum(10, 20);
+
+	}
+
+}
+package com.sub.lamda_expression;
+@FunctionalInterface
+interface Length
+{
+	int getLength(String str);
+}
+public class LambdaDemo3 {
+
+	public static void main(String[] args) {
+		Length length=str->
+		{
+			return str.length();
+		};
+		
+		String name=IO.readln("Enter Your name: ");
+        IO.println(length.getLength(name));
+	}
+
+}
+package com.sub.lamda_expression;
+@FunctionalInterface
+interface Drawable
+{
+	void draw();
+}
+
+public class LambdaDemo4 {
+
+	public static void main(String[] args) {
+		String shapeType="Circle";
+		
+		Drawable d=()->IO.println("Drawing "+shapeType);
+		d.draw();
+
+	}
+
+}
+package com.sub.lamda_expression;
+@FunctionalInterface
+interface Callable
+{
+	void call();
+	
+}
+public class LambdaDemo5 {
+
+	public static void main(String[] args) {
+		getFunctionalInterface(()->IO.println("calling"));
+
+	}
+	public static void getFunctionalInterface(Callable c1)
+	{
+		c1.call();
+	}
+
+}
