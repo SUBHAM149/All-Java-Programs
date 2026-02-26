@@ -1,0 +1,53 @@
+package com.sub.function;
+import java.util.function.Function;
+
+
+class Employee {
+    private int id;
+    private String name;
+    private double salary;
+
+    public Employee(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+    	this.id=id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+    	this.name=name;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public void setSalary(double salary) {
+    	this.salary=salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+    }
+}
+
+public class FunctionalDemo3 {
+    public static void main(String[] args) {
+        
+        Function<Employee, Double> fn3 = emp -> emp.getSalary();
+        Employee e1=new Employee(111,"Smith",90000);
+        
+        Double salary = fn3.apply(e1);
+        System.out.println("Employee Salary is: " + salary);
+
+        
+    }
+}
+
