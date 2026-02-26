@@ -1,0 +1,17 @@
+package com.sub.function;
+
+import java.util.function.Function; 
+import java.util.Scanner; 
+
+public class FunctionalDemo1
+{ 
+	public static void main(String[] args)
+   {
+		Scanner sc = new Scanner(System.in); 
+      Function<Integer, Integer> squareFn = num -> num * num; 
+      System.out.print("Enter a number: "); 
+      int number = sc.nextInt(); 
+      int result = squareFn.apply(number); 
+    System.out.println("Square of " + number + " is: " + result); sc.close();
+    }
+}
