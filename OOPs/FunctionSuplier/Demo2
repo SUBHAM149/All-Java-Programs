@@ -1,0 +1,40 @@
+package com.sub.function.Supplier;
+
+import java.util.function.Supplier;
+import java.util.Scanner;
+
+class Player {
+    private int id;
+    private String name;
+
+    public Player(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Player [id=" + id + ", name=" + name + "]";
+    }
+}
+
+public class SupplierDemo2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Player ID: ");
+        int id = sc.nextInt();
+        sc.nextLine(); // consume newline
+
+        System.out.print("Enter Player Name: ");
+        String name = sc.nextLine();
+
+        // Supplier that returns a Player object
+        Supplier<Player> s2 = () -> new Player(id, name);
+
+        System.out.println("Created Player: " + s2.get());
+
+        sc.close();
+    }
+}
+
