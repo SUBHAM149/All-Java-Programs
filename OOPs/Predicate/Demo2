@@ -1,0 +1,23 @@
+package com.sub.predicate;
+
+import java.util.function.Predicate;
+
+public class PredicateDemo1 {
+
+	public static void main(String[] args) {
+		Predicate<Integer>p1=age->age >=18;
+		int age=Integer.parseInt(IO.readln("Enter your age: "));
+		boolean isEligible=p1.test(age);
+		
+		if(isEligible)
+		{
+			IO.println("Eligible for vote.");
+		}
+		else
+		{
+			IO.println("Not Eligible for vote.");
+		}
+
+	}
+
+}
