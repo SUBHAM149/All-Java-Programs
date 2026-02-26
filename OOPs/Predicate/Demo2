@@ -1,0 +1,25 @@
+package com.sub.predicate;
+import java.util.Scanner;
+import java.util.function.Predicate;
+public class PredicateDemo2 {
+// Verify whether my name starts with character A or not
+
+    public static void main(String[] args) {
+
+        Predicate<String> p2 = name -> name.startsWith("A");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your Name : ");
+        String myName = sc.nextLine();
+
+        boolean isStart = p2.test(myName);
+
+        if (isStart) {
+            System.out.println(myName + " starts with A");
+        } else {
+            System.out.println(myName + " does not start with A");
+        }
+
+        sc.close();
+    }
+}
