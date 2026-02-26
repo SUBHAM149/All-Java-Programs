@@ -1,0 +1,68 @@
+package com.sub.predicate;
+
+import java.util.Scanner;
+import java.util.function.Predicate;
+
+// Verify whether Student is Pass or Fail
+class Student {
+
+    private int id;
+    private String name;
+    private double marks;
+
+    public Student(int id, String name, double marks) {
+        this.id = id;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    @Override
+    public String toString() {
+        return "Student [id=" + id + ", name=" + name + ", marks=" + marks + "]";
+    }
+}
+
+public class PredicateDemo3 {
+
+    public static void main(String[] args) {
+
+        // Predicate to check pass or fail
+        Predicate<Student> p3 = student -> student.getMarks() >= 75;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Student Id : ");
+        int id = sc.nextInt();
+        sc.nextLine(); // buffer clear
+
+        System.out.print("Enter Student Name : ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter Student Marks : ");
+        double marks = sc.nextDouble();
+
+        Student raj = new Student(id, name, marks);
+
+        boolean isPass = p3.test(raj);
+
+        if (isPass) {
+            System.out.println(raj.getName() + " is Passed");
+        } else {
+            System.out.println(raj.getName() + " is Failed");
+        }
+
+        sc.close();
+    }
+}
