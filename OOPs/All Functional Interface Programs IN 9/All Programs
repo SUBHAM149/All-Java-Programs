@@ -1,0 +1,57 @@
+import java.util.function.*;
+
+public class AllFunctionalInterfaces
+{
+    public static void main(String[] args)
+    {
+        // 1) Predicate<T>
+        Predicate<String> p = s -> s.length() > 5;
+        System.out.println("Predicate: " + p.test("Hyderabad"));
+
+        // 2) Consumer<T>
+        Consumer<String> c = s -> System.out.println("Consumer: " + s);
+        c.accept("Hello Sakshi");
+
+        // 3) Function<T,R>
+        Function<String, Integer> f = s -> s.length();
+        System.out.println("Function: " + f.apply("Java"));
+
+        // 4) Supplier<T>
+        Supplier<Double> s = () -> Math.random();
+        System.out.println("Supplier: " + s.get());
+
+        // 5) BiPredicate<T,U>
+        BiPredicate<String, Integer> bp = (x, y) -> x.length() == y;
+        System.out.println("BiPredicate: " + bp.test("Ravi", 4));
+
+        // 6) BiConsumer<T,U>
+        BiConsumer<String, Integer> bc = (name, age) ->
+                System.out.println("BiConsumer: " + name + " " + age);
+        bc.accept("Ravi", 25);
+
+        // 7) BiFunction<T,U,R>
+        BiFunction<Integer, Integer, Integer> bf = (a, b) -> a + b;
+        System.out.println("BiFunction: " + bf.apply(10, 20));
+
+        // 8) UnaryOperator<T>
+        UnaryOperator<Integer> uo = x -> x * x;
+        System.out.println("UnaryOperator: " + uo.apply(5));
+
+        // 9) BinaryOperator<T>
+        BinaryOperator<Integer> bo = (a, b) -> a * b;
+        System.out.println("BinaryOperator: " + bo.apply(4, 5));
+    }
+}
+
+
+OUTPUT
+------
+Predicate: true
+Consumer: Hello Sakshi
+Function: 4
+Supplier: 0.234234
+BiPredicate: true
+BiConsumer: Ravi 25
+BiFunction: 30
+UnaryOperator: 25
+BinaryOperator: 20
