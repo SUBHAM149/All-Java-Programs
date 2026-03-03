@@ -1,0 +1,59 @@
+
+package com.sub.pattern;
+import java.util.Scanner;
+
+public class Program1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Choose a program:");
+        System.out.println("1. Check Palindrome");
+        System.out.println("2. Print Star Pattern");
+        int choice = sc.nextInt();
+
+        switch(choice) {
+            case 1:
+                
+                System.out.print("Enter a number: ");
+                int num = sc.nextInt();
+                int original = num;
+                int rev = 0;
+
+                while(num > 0) {
+                    int digit = num % 10;
+                    rev = rev * 10 + digit;
+                    num = num / 10;
+                }
+
+                if(original == rev) {
+                    System.out.println(original + " is a Palindrome");
+                } else {
+                    System.out.println(original + " is not a Palindrome");
+                }
+                break;
+
+            case 2:
+                // Star pattern
+                System.out.print("Enter n: ");
+                int n = sc.nextInt();
+
+                for(int i = 1; i <= n; i++) {
+                    // Print spaces
+                    for(int j = i; j < n; j++) {
+                        System.out.print("  ");
+                    }
+                    // Print stars
+                    for(int k = 1; k <= (2*i - 1); k++) {
+                        System.out.print("* ");
+                    }
+                    System.out.println();
+                }
+                break;
+
+            default:
+                System.out.println("Invalid choice!");
+        }
+
+        sc.close();
+    }
+}
