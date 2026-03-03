@@ -1,0 +1,16 @@
+package com.sub.pattern;
+
+import java.util.Scanner;
+
+public class RemoveZeros {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String num = sc.next();
+
+        // Replace all zeros with empty string
+        String result = num.replace("0", "");
+
+        System.out.println("After removing zeros: " + result);
+    }
+}
