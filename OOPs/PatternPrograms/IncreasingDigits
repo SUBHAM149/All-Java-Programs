@@ -1,0 +1,29 @@
+package com.sub.pattern;
+
+import java.util.Scanner;
+
+public class IncreasingDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int prev = 10; // start with a digit larger than any possible digit
+        boolean increasing = true;
+
+        while(num > 0) {
+            int digit = num % 10;
+            if(digit >= prev) {
+                increasing = false;
+                break;
+            }
+            prev = digit;
+            num /= 10;
+        }
+
+        if(increasing) {
+            System.out.println("Digits are in increasing order");
+        } else {
+            System.out.println("Digits are NOT in increasing order");
+        }
+    }
+}
