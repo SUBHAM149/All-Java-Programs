@@ -1,0 +1,31 @@
+package com.sub.basic;
+
+public class MultipleCatch {
+
+	public static void main(String[] args) {
+		try
+		{
+			 int x=10/2;
+			 IO.println("x value is : "+x);
+			 int []arr= {10,20,30,40};
+			 IO.println(arr[4]);
+		}
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.err.println("Array index is out of bounds");
+		}
+		catch(ArithmeticException e)
+		{
+			System.err.println("Array index is out of bounds");
+		}
+		catch(Exception e)
+		{
+			System.err.println("General Problem");
+		}
+
+	}
+
+}
+output
+x value is : 5
+Array index is out of bounds
