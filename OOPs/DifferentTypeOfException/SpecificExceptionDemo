@@ -1,0 +1,23 @@
+package com.sub.basic;
+
+public class SpecificException {
+
+	public static void main(String[] args) {
+		try
+		{
+			int size=Integer.parseInt(IO.readln("Enter the size of the Array : "));
+			int arr[]=new int[size];
+			for(int x:arr)
+			{
+				IO.println(x);
+			}
+		}	
+			catch(NegativeArraySizeException e)
+			{
+				System.err.println("Array size must be positive integer");
+			}
+		
+        IO.println("Mian method Completed");
+	}
+
+}
