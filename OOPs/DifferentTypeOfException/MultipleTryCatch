@@ -1,0 +1,42 @@
+package com.sub.basic;
+
+public class MultipleTryCatch {
+
+	public static void main(String[] args) {
+		try
+		{
+			String str=null;
+			IO.println(str.length());
+		}
+		catch(NullPointerException e)
+		{
+			System.err.println("Reference variable is pointing to null");
+		}
+		
+		try
+		{
+			String s1="java";
+			Integer value=Integer.valueOf(s1);
+			IO.println(value);
+		}
+		catch(NumberFormatException e)
+		{
+			System.err.println("String input is not in a proper format");
+		}
+		
+		try
+		{
+			Object []arr=new String[3];
+			arr[0]="12";
+			arr[1]="24";
+			arr[2]=90;
+			
+		}
+		catch(ArrayStoreException e)
+		{
+			System.err.println("Cannot insert illigal data into array");
+		}
+
+	}
+
+}
