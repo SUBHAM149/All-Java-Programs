@@ -1,0 +1,22 @@
+package com.sub.basic;
+
+public class ThrowableMethods {
+
+	public static void main(String[] args) {
+		try
+		{
+			int arr[]= {12,90,56,78};
+			IO.println("arr[4]");
+		}
+		catch(Exception e)
+		{
+			IO.println(e.toString());
+			IO.println("---------------------");
+			IO.println(e.getMessage());
+			IO.println("---------------------");
+			e.printStackTrace();
+		}
+
+	}
+
+}
