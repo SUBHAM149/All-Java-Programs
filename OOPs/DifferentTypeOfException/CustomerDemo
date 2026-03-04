@@ -1,0 +1,28 @@
+package com.sub.basic;
+
+public class CustomerDemo {
+
+	public static void main(String[] args) {
+		clientResult();
+
+	}
+	public static void clientResult()
+	{
+		IO.println("Hello Client, Welcome to my Application");
+	
+	try
+	{
+		int x=Integer.parseInt(IO.readln("Enter the value of x : "));
+		int y=Integer.parseInt(IO.readln("Enter the value of y : "));
+		
+		int result=x/y;
+		IO.println("Result is: "+result);
+	}
+	catch(Exception e)
+	{
+		System.err.println("Plese dont put zero here");
+	}
+	IO.println("Thank you for visiting My Application");
+	
+	}
+}
