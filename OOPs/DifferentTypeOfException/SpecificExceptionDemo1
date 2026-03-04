@@ -1,0 +1,17 @@
+package com.sub.basic;
+
+public class SpecificExceptionDemo1 {
+
+	public static void main(String[] args) {
+		try
+		{
+			throw new OutOfMemoryError();
+		}
+		catch(Error e)
+		{
+			System.err.println("Out of memeory error");
+		}
+
+	}
+
+}
