@@ -1,0 +1,24 @@
+package com.sub.finally_block;
+
+public class FinallyBlockDemo2 {
+
+	public static void main(String[] args) {
+		IO.println("Main method started");
+		try
+		{
+			int size=Integer.parseInt(IO.readln("Enter the size of the array :"));
+			int []arr=new int[size];
+		}
+		catch(NegativeArraySizeException e)
+		{
+			IO.println("Array size must be a positive integer");
+		}
+		finally
+		{
+			IO.println("Resources are handeld here");
+		}
+		IO.println("Main method ended");
+
+	}
+
+}
