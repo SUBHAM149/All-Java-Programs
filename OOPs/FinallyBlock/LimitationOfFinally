@@ -1,0 +1,29 @@
+package com.sub.finally_block;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class LimitationOfFinally {
+
+	public static void main(String[] args) {
+		Scanner sc=null;
+		try
+		{
+			sc=new Scanner(System.in);
+			IO.println("Enter your salary :");
+			double salary=sc.nextDouble();
+			IO.println("Your salary is :"+salary);
+		}
+		catch(InputMismatchException e)
+		{
+			System.err.println("Input is not in a proper format");
+		}
+		finally
+		{
+			IO.println("Finally Block");
+			sc.close();
+		}
+
+	}
+
+}
