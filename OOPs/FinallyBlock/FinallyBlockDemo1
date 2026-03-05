@@ -1,0 +1,21 @@
+package com.sub.finally_block;
+
+public class FinallyBlockDemo1 {
+
+	public static void main(String[] args) {
+		IO.println("Main Method Started");
+		try
+		{
+			IO.println("Try block");
+			int x=10/0;
+			IO.println(x);
+		}
+		finally
+		{
+			IO.println("finally block");
+		}
+		IO.println("Main method ended");
+
+	}
+
+}
