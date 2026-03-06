@@ -35,3 +35,8 @@ public class ExceptionPropagationWithChecked {
 	}
 
 }
+OUTPUT
+------
+M2 METHOD STRATED
+java.lang.ClassNotFoundException: com.ravi.exception_propagation.OracleDriver1HANDELED BY MAIN METHOD
+Main method ended
