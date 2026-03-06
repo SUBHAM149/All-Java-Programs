@@ -1,0 +1,37 @@
+package com.sub.exception_propagation;
+class OracleDriver
+{
+	static
+	{
+		IO.println("Static Block of OracleDriver class");
+	}
+}
+public class ExceptionPropagationWithChecked {
+
+	public static void main(String[] args) {
+		IO.println("Main method strated");
+		try
+		{
+			m1();
+		}
+		catch(ClassNotFoundException e)
+		{
+			IO.println(e+"HANDELED BY MAIN METHOD");
+		}
+		IO.println("Main method ended");
+
+	}
+	public static void m1() throws ClassNotFoundException
+	{
+		IO.println("M1 METHOD STRATED");
+		m2();
+		IO.println("M1 METHOD ENDED");
+	}
+	public static void m2() throws ClassNotFoundException
+	{
+		IO.println("M2 METHOD STRATED");
+		Class.forName("com.ravi.exception_propagation.OracleDriver1");
+		IO.println("M2 METHOD ENDED");
+	}
+
+}
