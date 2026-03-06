@@ -29,3 +29,8 @@ public class ExceptionPropagationWithUnchecked {
 	}
 
 }
+OUTPUT
+------
+java.lang.ArithmeticException: / by zeroHANDED BY M1 METHOD
+M1 Method ended
+Main Method Ended
