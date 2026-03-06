@@ -1,0 +1,31 @@
+package com.sub.exception_propagation;
+
+public class ExceptionPropagationWithUnchecked {
+
+	public static void main(String[] args) {
+		IO.println("Main method Stsrted");
+		m1();
+		IO.println("Main Method Ended");
+
+	}
+	public static void m1()
+	{
+		IO.println("M1 method started");
+		try
+		{
+			m2();
+		}
+		catch(ArithmeticException e)
+		{
+			IO.println(e+"HANDED BY M1 METHOD");
+		}
+		IO.println("M1 Method ended");
+	}
+	public static void m2()
+	{
+		IO.println("M2 METHOD STARTED");
+		IO.println(10/0);
+		IO.println("M2 METHOD ENDED");
+	}
+
+}
