@@ -1,0 +1,53 @@
+package com.testing;
+import java.util.Scanner;
+
+class ExceptionHandlingDemo {
+    public static void handleExceptions(String input) {
+        try {
+            System.out.println("Length of the input string: " + input.length());
+            int number = Integer.parseInt(input);
+            System.out.println("Converted to integer: " + number);
+            System.out.println("Uppercase version: " + input.toUpperCase());
+        } catch (NumberFormatException e) {
+            System.out.println("NumberFormatException: Input is not a valid integer.");
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException: Input is null.");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine();
+        if (input.equals("null")) {
+            input = null; // simulate null input
+        }
+        handleExceptions(input);
+        sc.close();
+    }
+}
+TEST CASE 1 :
+-------------
+Input : 123
+
+Output :
+Length of the input string: 3
+Converted to integer: 123
+Uppercase version: 123
+
+
+TEST CASE 2 :
+-------------
+Input : abc
+
+Output :
+Length of the input string: 3
+NumberFormatException: Input is not a valid integer.
+
+
+TEST CASE 3 :
+-------------
+Input : null
+
+Output :
+NullPointerException: Input is null.
