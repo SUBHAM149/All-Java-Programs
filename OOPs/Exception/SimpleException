@@ -26,3 +26,53 @@ public class SimpleException {
 	}
 
 }
+TEST CASE 1 :
+-------------
+Input :
+Enter the first integer (a): 10
+Enter the second integer (b): 20
+
+Output:
+You entered a = 10 and b = 20
+
+
+TEST CASE 2 :
+-------------
+Input :
+Enter the first integer (a): abc
+
+Output:
+getMessage():=> null
+
+toString():=> java.util.InputMismatchException
+
+println():=> InputMismatchException occurred. Please enter only integer numbers.
+
+printStackTrace():=> 
+java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+	at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+	at com.testing.SimpleExceptionDemo.main(SimpleExceptionDemo.java:15)
+
+
+TEST CASE 3 :
+-------------
+Enter the first integer (a): 10
+Enter the second integer (b): abc
+
+Output :
+getMessage():=> null
+
+toString():=> java.util.InputMismatchException
+
+println():=> InputMismatchException occurred. Please enter only integer numbers.
+
+printStackTrace():=> 
+java.util.InputMismatchException
+	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
+	at java.base/java.util.Scanner.next(Scanner.java:1594)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
+	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
+	at com.testing.SimpleExceptionDemo.main(SimpleExceptionDemo.java:18)
