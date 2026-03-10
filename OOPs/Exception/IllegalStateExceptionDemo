@@ -1,0 +1,27 @@
+package com.sub.exception_propagation;
+
+public class IllegalStateExceptionDemo {
+	static void throwIllegalException() {
+	       try {
+	           throw new IllegalStateException("MyException");
+	       } catch (IllegalStateException objA) {
+	           System.out.println("Caught: " + objA);
+	       }
+	   }
+
+	public static void main(String[] args) {
+		System.out.println("Calling throwIllegalException from main method:");
+        throwIllegalException();
+
+
+	}
+
+}
+TEST CASE 1 :
+--------------
+Input:
+No input required.
+
+Output:
+Calling throwIllegalException from main method:
+Caught: java.lang.IllegalStateException: MyException
