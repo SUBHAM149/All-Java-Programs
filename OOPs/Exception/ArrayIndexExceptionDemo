@@ -1,0 +1,87 @@
+package com.sub.exception_propagation;
+import java.util.Scanner;
+public class ArrayIndexExceptionDemo {
+
+	public static void main(String[] args) {
+		 Scanner sc=new Scanner(System.in);
+		   try
+		   {
+			   int a[] = new int[2];
+			   a[0] = 10;
+			   a[1] = 20;
+			   
+			  
+			   IO.println("Enter an Index Value: ");
+			   int index=sc.nextInt();
+			   
+			    System.out.println(a[index]);
+	        } catch (ArrayIndexOutOfBoundsException e) {
+	            System.out.println("getMessage():=> " + e.getMessage());
+	            System.out.println("toString():=> " + e.toString());
+	            System.out.println("println():=> You tried to access an invalid array index. Please check the index range.");
+	            System.out.println("printStackTrace():=> ");
+	            e.printStackTrace();
+	        } finally {
+	            sc.close();
+	        }
+
+	}
+
+}
+TEST CASE 1 :
+-------------
+
+Input:
+3
+
+Output:
+getMessage():=> Index 3 out of bounds for length 2
+
+toString():=> java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
+
+println():=> You tried to access an invalid array index. Please check the index range.
+
+printStackTrace():=>
+java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 2
+	at com.testing.ArrayIndexExceptionDemo.main(ArrayIndexExceptionDemo.java:12)
+
+
+
+TEST CASE 2 :
+-------------
+
+Input : 
+2
+
+Output :
+getMessage():=> Index 2 out of bounds for length 2
+
+toString():=> java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+
+println():=> You tried to access an invalid array index. Please check the index range.
+
+printStackTrace():=>
+java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 2
+	at com.testing.ArrayIndexExceptionDemo.main(ArrayIndexExceptionDemo.java:12)
+
+
+
+
+TEST CASE 3 :
+-------------
+
+Input:
+1 
+
+Output:
+20
+
+
+TEST CASE 4 :
+-------------
+
+Input:
+0 
+
+Output:
+10
