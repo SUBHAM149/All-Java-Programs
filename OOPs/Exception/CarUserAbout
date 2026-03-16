@@ -1,0 +1,102 @@
+package com.sub.exception_propagation;
+import java.util.Scanner;
+class CarStoppedException extends Exception{
+	public CarStoppedException(String message) {
+		super(message);
+	}
+}
+
+class CarPunctureException extends Exception{
+	public CarPunctureException(String message) {
+		super(message);
+	}
+}
+
+class CarHeatException extends Exception{
+	public CarHeatException(String message) {
+		super(message);
+	}
+}
+
+
+class CarTest
+{
+	
+	public static void Stop(String action)throws CarStoppedException
+	{
+		if(action.equalsIgnoreCase("stop")) 
+		{
+			throw new CarStoppedException("Car stoped for some reason.");
+		}else 
+		{
+			IO.println("Car not stopeed");
+		}
+	}
+	
+	public static void Puncture(String action)throws CarPunctureException
+	{
+		if(action.equalsIgnoreCase("puncture"))
+		{
+			throw new CarPunctureException("Car is punctured.");
+		}else
+		{
+			IO.println("Car not punctured.");
+		}
+	}
+	
+	public static void carHeat(int temperature)throws CarHeatException
+	{
+		if(temperature>50)
+		{
+			throw new CarHeatException("Car is heated more the 50 degrees Celsius.");
+		}else
+		{
+			IO.println("Car temperature normal.");
+		}
+	}
+			
+}
+
+
+
+
+
+public class CarUser {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Enter action for stop test (stop/go): ");
+        String stopAction = sc.nextLine();
+        try 
+        {
+            CarTest.Stop(stopAction);
+        } catch (CarStoppedException e) 
+        {
+            System.out.println(e.getMessage());
+        }
+
+        
+        System.out.print("Enter action for puncture test (puncture/move): ");
+        String punctureAction = sc.nextLine();
+        try 
+        {
+            CarTest.Puncture(punctureAction);
+        } catch (CarPunctureException e) 
+        {
+            System.out.println(e.getMessage());
+        }
+
+        
+        System.out.print("Enter car temperature: ");
+        int temp = sc.nextInt();
+        try {
+            CarTest.carHeat(temp);
+        } catch (CarHeatException e) 
+        {
+            System.out.println(e.getMessage());
+        }
+
+        sc.close();
+    }
+}
