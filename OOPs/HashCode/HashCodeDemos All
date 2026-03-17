@@ -1,0 +1,31 @@
+package com.sub.hascode;
+
+public class HashCodeDemo1 {
+
+	public static void main(String[] args) {
+		String str="JAVA";
+		IO.println(str.hashCode());
+		
+		Double d1=12.90;
+		IO.println(d1.hashCode());
+		
+		String s1="hyderabad";
+		IO.println(s1.hashCode());
+
+	}
+
+}
+package com.sub.hascode;
+
+public class HashCodeDemo2 {
+
+	public static void main(String[] args) {
+		Integer i=65;
+		String s1="A";
+		
+		IO.println(i.hashCode());
+		IO.println(s1.hashCode());
+
+	}
+
+}
