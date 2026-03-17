@@ -1,0 +1,47 @@
+package com.sub.equals;
+class Employee1
+{
+	private int id;
+	private String name;
+	
+	public Employee1(int id,String name)
+	{
+		super();
+		this.id=id;
+		this.name=name;
+	}
+	@Override
+	public int hashCode()
+	{
+		return this.id;
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		Employee1 e2=(Employee1) obj;
+		
+		if(this.id==e2.id && this.name.equals(e2.name))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+public class EqualsDemo3 {
+    
+	public static void main(String[] args) {
+		Employee e1=new Employee(111,"Scott");
+		Employee e2=new Employee(111,"Scott");
+		IO.println(e1.equals(e2));
+		IO.println(e1.hashCode()+" : "+e2.hashCode());
+
+	}
+
+}
+OUTPUT
+true
+111 : 111
