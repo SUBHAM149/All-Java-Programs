@@ -1,0 +1,28 @@
+package com.sub.equals;
+class Customer
+{
+	private int id;
+	private String name;
+	
+	public Customer(int id,String name)
+	{
+		super();
+		this.id=id;
+		this.name=name;
+	}
+}
+public class EqualsDemo1 {
+
+	public static void main(String[] args) {
+		Customer c1=new Customer(111,"Scott");
+		Customer c2=new Customer(111,"Scott");
+		
+		IO.println(c1==c2);
+		IO.println(c1.equals(c2));
+
+	}
+
+}
+//OUTPUT
+false
+false
