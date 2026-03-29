@@ -80,3 +80,89 @@ public class PossibleWaysToRetriveCollectionObject {
         
     }
 }
+
+
+OUTPUT
+-------
+1) By Using toString() method : 
+[Hyderabad, Kolkata, Pune, Indore, Mumbai]
+
+2) By Using Ordinary for loop : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+3) By Using for loop : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+4) By Using Enumaration interface : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+5) By Using Enumaration interface : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+6) By Using ListIterator interface : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+IN BACKWARD DIRECTION
+Mumbai
+Indore
+Pune
+Kolkata
+Hyderabad
+
+7) By Using Spliteratror interface : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+8) By Using forEach() Method : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+9) By Using Method Reference : 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+10) By Using Stream(): 
+Hyderabad
+Kolkata
+Pune
+Indore
+Mumbai
+
+11) By Using ParallelStream(): 
+Pune
+Mumbai
+Indore
+Kolkata
+Hyderabad
+
+
+
