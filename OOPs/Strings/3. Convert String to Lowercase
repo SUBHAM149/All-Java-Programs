@@ -1,0 +1,9 @@
+3. Convert String to Lowercase
+public class LowerCaseDemo {
+    public static void main(String[] args) {
+        String str = "JAVA";
+        System.out.println(str.toLowerCase());
+    }
+}
+Output
+java
